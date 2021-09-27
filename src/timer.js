@@ -1,4 +1,5 @@
-import 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js';
+// import 'https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js';
+import {Howl} from 'howler';
 
 export const timer = {
     settings: {
@@ -62,7 +63,7 @@ export const timer = {
 
     playSound() {
         (new Howl({
-            src: ['./src/beep.mp3'],
+            src: ['./assets/beep.mp3'],
             html5: true,
             autoplay: false,
             volume: 0.8,
