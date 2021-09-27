@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datetime superapp</title>
     <script src="./src/main.js" type="module"></script>
-    <script src="./src/switcher.js" type="module"></script>
 </head>
 
 <body>
@@ -31,14 +30,17 @@
     <p id="datecalc__result"></p>
 </form>
 
+
 <form class="forms" id="timer" style="display: none">
     <h3>Timer</h3>
     <label>
-        <strong>Введите время</strong>
-        <input type="time" name="time"/>
+        <strong>Введите количество минут</strong>
+        <input id="timerInput" type="number" name="minutes" value=".1"/>
     </label>
-    <button type="submit">Start</button>
-    <button type="submit">Stop</button>
+    <p style="color: red; font-size: 32px;" id="timerDisplay"></p>
+
+    <button id="timerStart">Start</button>
+    <button id="timerStop">Stop</button>
 </form>
 
 </body>

@@ -1,0 +1,22 @@
+{
+  "name": "build-tools",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aromanovnik/Build-tools.git"
+  },
+  "author": "Aleksey Romanov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aromanovnik/Build-tools/issues"
+  },
+  "homepage": "https://github.com/aromanovnik/Build-tools#readme",
+  "dependencies": {
+    "howler": "^2.2.3"
+  }
+}
