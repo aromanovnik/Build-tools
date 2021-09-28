@@ -41,10 +41,10 @@ module.exports = {
                     "sass-loader"
                 ]
             },
-            {
-                test: /\\.(png|jpe?g|gif|mp3|mp4)$/i, // 1
-                use: 'file-loader' // 2
-            }
+            // {
+            //     test: /\.(png|jpe?g|gif|mp3|mp4)$/i,
+            //     loader: 'file-loader',
+            // }
 
         ]
     },
@@ -56,7 +56,7 @@ module.exports = {
         // }),
         new CopyPlugin({
             patterns: [
-                // {from: "assets", to: "assets"},
+                {from: "assets", to: "assets"},
                 {from: "index.html", to: "index.html"},
             ],
         }),
