@@ -1,4 +1,4 @@
-import {list} from "./list.js";
+import {list, enumListItemType} from "./list.js";
 
 export class ListRender {
     settings = {
@@ -36,9 +36,35 @@ export class ListRender {
         if (!item) {
             return;
         }
+        let itemCoverHTML = '';
+
+        switch (item.type) {
+            case enumListItemType.image:
+                itemCoverHTML = `
+                     <div class="${this.settings.classNameItem}-cover ${this.settings.classNameItem}-cover_image">
+                         <img src="${item.url?.default}" alt="${item.title}">
+                     </div>
+                `
+                break;
+            case enumListItemType.audio:
+                itemCoverHTML = `
+                     <div class="${this.settings.classNameItem}-cover ${this.settings.classNameItem}-cover_audio">
+                         <audio controls src="${item.url?.default}">
+                     </div>
+                `
+                break;
+            case enumListItemType.video:
+                itemCoverHTML = `
+                     <div class="${this.settings.classNameItem}-cover ${this.settings.classNameItem}-cover_video">
+                         <video controls src="${item.url?.default}">
+                     </div>
+                `
+                break;
+        }
+
         this.parent.insertAdjacentHTML('beforeend',
             `<div class="${this.settings.classNameItem}">
-                       <div class="${this.settings.classNameItem}-image"><img src="${item.img}" alt="${item.title}"></div>
+                        ${itemCoverHTML}
                        <h3>${item.title}</h3>
                    </div>`);
     }

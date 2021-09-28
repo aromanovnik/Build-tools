@@ -16,7 +16,7 @@
     }
   }
 
-  &__item-image {
+  &__item-cover {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,6 +26,11 @@
     img {
       height: 100%;
       width: auto;
+    }
+
+    video, audio {
+      width: 100%;
+      height: 100%;
     }
   }
 }
